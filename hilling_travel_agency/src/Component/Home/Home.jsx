@@ -66,7 +66,7 @@ const Home = () => {
         </Box>
         <Box>
         <Box borderRadius={"18px"} backgroundColor={"gray"} width={"22%"} height={"45px"}
-           display="flex" justifyContent="center" alignItems="center" position="relative">
+           >
             <CalendarIcon 
               
             /></Box>
