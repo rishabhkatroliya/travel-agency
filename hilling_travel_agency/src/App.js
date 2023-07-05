@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import {Box} from "@chakra-ui/react"
-import AllRoutes from './AllRoutes/AllRoutes';
+import AllRoutes from './Routes/AllRoutes';
 
 function App() {
   return (
