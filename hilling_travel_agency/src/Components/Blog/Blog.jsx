@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from "axios";
 import BackgroundImg from "./Images/BackgroundImg.jpeg";
 import kana from "./Images/kana.webp";
 import camping from "./Images/camping.webp";
@@ -8,7 +9,6 @@ import asia from "./Images/asia.jpg";
 import hiking from "./Images/hiking.jpg";
 import oasis from "./Images/oasis.webp";
 import historical from "./Images/historical.webp";
-import {blog} from "./Data/data";
 import {
     Box,
     Flex,
@@ -30,7 +30,16 @@ import { SearchIcon } from "@chakra-ui/icons";
 
 
 const Blog = () => {
-    console.log("blog",blog);
+    const[data,setData] = React.useState([]);
+     
+      const fetchData = async () => {
+        const res = await axios.get("http://localhost:8080/property");
+        setData(res.data);
+      };
+    React.useEffect(()=>{
+        fetchData();
+    },[]);
+
     return (
         <Box backgroundImage={BackgroundImg} fontSize={"16px"} h={"90vh"} backgroundSize={"cover"} backgroundPosition={"center center"} ml={"60px"} mr={"60px"} w={{ base: "100%", md: "90%" }} borderBottomLeftRadius={"30%"} borderBottomRightRadius={"30%"}>
             <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
@@ -184,7 +193,7 @@ const Blog = () => {
             <Box mt={"200px"}>
                 <Flex justifyContent={"center"}>
                 <Grid templateColumns='repeat(4, 1fr)'>
-{blog.map((post)=>{
+{data.map((post)=>{
    return <Wrap spacing="30px" marginTop="5" p={"1rem"} w={"275px"} borderRadius={"0.375rem"} background={"#FFFAF0"} boxShadow={" 0 4px 6px -1px rgba(0, 0, 0, 0.1),0 2px 4px -1px rgba(0, 0, 0, 0.06)"}>
     <WrapItem width={{ base: '100%', sm: '100%', md: '100%', lg: '100%' }}>
       <Box w="100%">
