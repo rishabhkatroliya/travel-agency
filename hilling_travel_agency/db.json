@@ -1,14 +1,9 @@
 {
   "users": [
-    {
-      "id": 1,
-      "name": "Naruto uzumaki"
-    },
-    {
-      "id": 2,
-      "name": "Light Yagami"
-    }
+    { "id": 1, "name": "Naruto uzumaki" },
+    { "id": 2, "name": "Light Yagami" }
   ],
+
   "property": [
     {
       "id": 1,
