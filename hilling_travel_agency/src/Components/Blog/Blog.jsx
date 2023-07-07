@@ -38,6 +38,8 @@ const Blog = () => {
 
     return (
         <Box backgroundImage={Nature} backgroundColor={"rgb(124, 141, 211)"} fontSize={"16px"} h={"90vh"} backgroundSize={"cover"} backgroundPosition={"center center"} >
+                            <Button color={"rgb(124, 141, 211)"} mr={"15px"} float={"right"} backgroundColor={"white"} mt={"20px"}><Link to="/addBlog">Add Blog</Link></Button>
+
             <Box>
                 <div justifyContent={"center"} >
                     <Heading color={"white"} fontSize={"48px"} fontWeight={"700"} pt={"1.7em"}>Destinations</Heading>
