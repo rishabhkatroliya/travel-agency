@@ -2,6 +2,7 @@ import React from 'react'
 import {Routes,Route} from "react-router-dom";
 import Home from '../Components/Home/Home';
 import Blog from '../Components/Blog/Blog';
+import BlogPost from '../Components/Blog/BlogPost';
 
 const AllRoutes = () => {
   return (
@@ -18,6 +19,8 @@ const AllRoutes = () => {
         <Route path='/payment' element={""}>Payment</Route>  {/* Akhil*/}
 
         <Route path='/blog' element={<Blog />}>Blog</Route> {/*Rishabh */}
+        <Route path='/blog/:id' element={<BlogPost />}>BlogPost</Route> {/*Rishabh */}
+
    </Routes> 
   )
 }
