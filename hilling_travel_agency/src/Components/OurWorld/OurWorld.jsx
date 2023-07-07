@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import {
   Box,
@@ -11,33 +12,65 @@ import {
   Image,
   Badge,
   Grid,
+  Select,
+  Stack,
 } from "@chakra-ui/react";
 import { StarIcon } from "@chakra-ui/icons";
 
 const OurWorld = () => {
-  // const property = {
-  //   imageUrl: "https://bit.ly/2Z4KKcF",
-  //   imageAlt: "Rear view of modern home with pool",
-  //   beds: 3,
-  //   baths: 2,
-  //   title: "Modern home in city center in the heart of historic Los Angeles",
-  //   formattedPrice: "$1,900.00",
-  //   reviewCount: 34,
-  //   rating: 4,
-  // };
-
   const [properties, setProperties] = useState([]);
-
-  useEffect(() => {
-    fetchData();
-  }, []);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filterByPrice, setFilterByPrice] = useState("");
+  const [filterByRating, setFilterByRating] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
 
   const fetchData = async () => {
     const res = await axios.get("http://localhost:8080/property");
     setProperties(res.data);
   };
 
-  console.log(properties);
+  const handleSearch = () => {
+    const filteredProperties = properties.filter((property) => {
+      const title = property.country.toLowerCase();
+      return title.includes(searchTerm.toLowerCase());
+    });
+    setSearchResults(filteredProperties);
+  };
+
+  const handleFilterByPrice = (event) => {
+    setFilterByPrice(event.target.value);
+  };
+
+  const handleFilterByRating = (event) => {
+    setFilterByRating(event.target.value);
+  };
+
+  const filteredProperties = properties.filter((property) => {
+    const title = property.country.toLowerCase();
+    return title.includes(searchTerm.toLowerCase());
+  });
+
+  const sortedProperties = [...filteredProperties].sort((a, b) => {
+    if (filterByPrice === "lowToHigh") {
+      const priceA = parseFloat(a.formattedPrice.replace(/[^0-9.-]+/g, ""));
+      const priceB = parseFloat(b.formattedPrice.replace(/[^0-9.-]+/g, ""));
+      return priceA - priceB;
+    } else if (filterByPrice === "highToLow") {
+      const priceA = parseFloat(a.formattedPrice.replace(/[^0-9.-]+/g, ""));
+      const priceB = parseFloat(b.formattedPrice.replace(/[^0-9.-]+/g, ""));
+      return priceB - priceA;
+    } else if (filterByRating === "lowToHigh") {
+      return a.rating - b.rating;
+    } else if (filterByRating === "highToLow") {
+      return b.rating - a.rating;
+    } else {
+      return 0;
+    }
+  });
+
+  useEffect(() => {
+    fetchData();
+  }, [searchResults]);
 
   return (
     <>
@@ -66,6 +99,7 @@ const OurWorld = () => {
                 size="lg"
                 color="black"
                 bg="white"
+                onChange={(event) => setSearchTerm(event.target.value)}
               />
               <Input
                 borderWidth="3px"
@@ -92,21 +126,63 @@ const OurWorld = () => {
                 padding={"2px"}
                 width={"130px"}
                 borderRadius={"8px"}
+                onClick={handleSearch}
               >
                 Search
               </Button>
             </HStack>
+            {/* <Center> */}
+            <HStack mt="50px">
+              <Text fontSize="3xl" mr="30px" color={"white"} fontWeight={"600"}>
+                Sort by:{" "}
+              </Text>
+              <Select
+                borderWidth="3px"
+                borderColor="gray.300"
+                width="250px"
+                placeholder="Sort by Price"
+                size="lg"
+                fontSize={"20px"}
+                value={filterByPrice}
+                onChange={handleFilterByPrice}
+              >
+                <option value="">None</option>
+                <option value="lowToHigh">Price (Low to High)</option>
+                <option value="highToLow">Price (High to Low)</option>
+              </Select>
+              <Select
+                borderWidth="3px"
+                borderColor="gray.300"
+                width="250px"
+                placeholder="Sort by Ratings"
+                size="lg"
+                fontSize={"20px"}
+                value={filterByRating}
+                onChange={handleFilterByRating}
+              >
+                <option value="">None</option>
+                <option value="lowToHigh">Rating (Low to High)</option>
+                <option value="highToLow">Rating (High to Low)</option>
+              </Select>
+            </HStack>
+            {/* </Center> */}
           </Box>
         </Center>
       </Box>
+      <Stack>
+        <Text fontSize="4xl" fontWeight={"700"} bg={"orange"}>
+          Showing Hotels in{" "}
+          {searchTerm.charAt(0).toUpperCase() + searchTerm.slice(1)}
+        </Text>
+      </Stack>
       <Grid
         templateColumns="repeat(3, 1fr)"
         gap={1}
         //  padding="50px 80px"
       >
-        {properties.map((property) => (
+        {sortedProperties.map((property) => (
           <GridItem
-            id={property.id}
+            key={property.id}
             bg="#edf3f8"
             _dark={{
               bg: "#3e3e3e",
@@ -180,6 +256,21 @@ const OurWorld = () => {
                   <Box as="span" ml="2" color="gray.600" fontSize="sm">
                     {property.reviewCount} reviews
                   </Box>
+                  <Link to={`/ourwords/${property.id}`}>
+                    <Button
+                      ml={"80px"}
+                      fontSize={"20px"}
+                      size="md"
+                      bg={"orange"}
+                      color={"white"}
+                      padding={"2px"}
+                      width={"100px"}
+                      borderRadius={"8px"}
+                      _hover={{ bg: "#7C8DD3" }}
+                    >
+                      Details
+                    </Button>
+                  </Link>
                 </Box>
               </Box>
             </Box>
