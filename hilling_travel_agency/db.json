@@ -1,6 +1,471 @@
 {
-    "users": [
-      { "id": 1, "name": "Naruto uzumaki" },
-      { "id": 2, "name": "Light Yagami" }
-    ]
-  }
+  "users": [
+    { "id": 1, "name": "Naruto uzumaki" },
+    { "id": 2, "name": "Light Yagami" }
+  ],
+
+  "property": [
+    {
+      "id": 1,
+      "imageUrl": "https://bit.ly/2Z4KKcF",
+      "imageAlt": "Rear view of modern home with pool",
+      "beds": 3,
+      "baths": 2,
+      "title": "Modern home in city center in the heart of historic Los Angeles",
+      "formattedPrice": "$1,900.00",
+      "reviewCount": 34,
+      "rating": 4
+    },
+    {
+      "id": 2,
+      "imageUrl": "https://cdn.pixabay.com/photo/2015/03/09/18/34/beach-666122_1280.jpg",
+      "imageAlt": "Example image 1",
+      "beds": 2,
+      "baths": 1,
+      "title": "Cozy apartment in downtown",
+      "formattedPrice": "$1,200.00",
+      "reviewCount": 12,
+      "rating": 3.5
+    },
+    {
+      "id": 3,
+      "imageUrl": "https://cdn.pixabay.com/photo/2015/03/09/18/34/beach-666122_1280.jpg",
+      "imageAlt": "Example image 2",
+      "beds": 4,
+      "baths": 3,
+      "title": "Spacious house with a garden",
+      "formattedPrice": "$2,500.00",
+      "reviewCount": 45,
+      "rating": 4.8
+    },
+    {
+      "id": 4,
+      "imageUrl": "https://cdn.pixabay.com/photo/2019/09/12/15/21/resort-4471852_640.jpg",
+      "imageAlt": "Example image 3",
+      "beds": 1,
+      "baths": 1,
+      "title": "Studio apartment in vibrant neighborhood",
+      "formattedPrice": "$900.00",
+      "reviewCount": 8,
+      "rating": 3.2
+    },
+    {
+      "id": 5,
+      "imageUrl": "https://cdn.pixabay.com/photo/2020/10/21/12/21/sea-bridge-5672967_640.jpg",
+      "imageAlt": "Example image 4",
+      "beds": 3,
+      "baths": 2,
+      "title": "Family-friendly house with backyard",
+      "formattedPrice": "$2,200.00",
+      "reviewCount": 20,
+      "rating": 4.2
+    },
+    {
+      "id": 6,
+      "imageUrl": "https://cdn.pixabay.com/photo/2016/09/26/11/26/resort-1695717_640.jpg",
+      "imageAlt": "Example image 5",
+      "beds": 2,
+      "baths": 2,
+      "title": "Apartment with stunning ocean view",
+      "formattedPrice": "$1,800.00",
+      "reviewCount": 28,
+      "rating": 4.6
+    },
+    {
+      "id": 7,
+      "imageUrl": "https://cdn.pixabay.com/photo/2021/12/11/07/59/hotel-6862159_640.jpg",
+      "imageAlt": "Example image 6",
+      "beds": 4,
+      "baths": 3,
+      "title": "Luxurious villa with private pool",
+      "formattedPrice": "$3,500.00",
+      "reviewCount": 55,
+      "rating": 4.9
+    },
+    {
+      "id": 8,
+      "imageUrl": "https://cdn.pixabay.com/photo/2016/11/08/04/46/jetty-1807471_640.jpg",
+      "imageAlt": "Example image 7",
+      "beds": 3,
+      "baths": 2,
+      "title": "Charming cottage in the countryside",
+      "formattedPrice": "$1,500.00",
+      "reviewCount": 16,
+      "rating": 3.8
+    },
+    {
+      "id": 9,
+      "imageUrl": "https://cdn.pixabay.com/photo/2014/01/02/10/14/beach-hut-237489_640.jpg",
+      "imageAlt": "Rear view of modern home with pool",
+      "beds": 3,
+      "baths": 2,
+      "title": "Modern home in city center in the heart of historic Los Angeles",
+      "formattedPrice": "$1,900.00",
+      "reviewCount": 34,
+      "rating": 4
+    },
+    {
+      "id": 10,
+      "imageUrl": "https://cdn.pixabay.com/photo/2017/03/09/06/30/pool-2128578_640.jpg",
+      "imageAlt": "Example image 1",
+      "beds": 2,
+      "baths": 1,
+      "title": "Cozy apartment in downtown",
+      "formattedPrice": "$1,200.00",
+      "reviewCount": 12,
+      "rating": 3.5
+    },
+    {
+      "id": 11,
+      "imageUrl": "https://cdn.pixabay.com/photo/2014/02/08/04/55/maldives-261506_640.jpg",
+      "imageAlt": "Example image 2",
+      "beds": 4,
+      "baths": 3,
+      "title": "Spacious house with a garden",
+      "formattedPrice": "$2,500.00",
+      "reviewCount": 45,
+      "rating": 4.8
+    },
+    {
+      "id": 12,
+      "imageUrl": "https://cdn.pixabay.com/photo/2014/02/08/04/55/maldives-261506_640.jpg",
+      "imageAlt": "Example image 3",
+      "beds": 1,
+      "baths": 1,
+      "title": "Studio apartment in vibrant neighborhood",
+      "formattedPrice": "$900.00",
+      "reviewCount": 8,
+      "rating": 3.2
+    },
+    {
+      "id": 13,
+      "imageUrl": "https://cdn.pixabay.com/photo/2014/02/08/04/55/maldives-261506_640.jpg",
+      "imageAlt": "Example image 4",
+      "beds": 3,
+      "baths": 2,
+      "title": "Family-friendly house with backyard",
+      "formattedPrice": "$2,200.00",
+      "reviewCount": 20,
+      "rating": 4.2
+    },
+    {
+      "id": 14,
+      "imageUrl": "https://cdn.pixabay.com/photo/2014/02/08/04/55/maldives-261506_640.jpg",
+      "imageAlt": "Example image 5",
+      "beds": 2,
+      "baths": 2,
+      "title": "Apartment with stunning ocean view",
+      "formattedPrice": "$1,800.00",
+      "reviewCount": 28,
+      "rating": 4.6
+    },
+    {
+      "id": 15,
+      "imageUrl": "https://cdn.pixabay.com/photo/2014/02/08/04/55/maldives-261506_640.jpg",
+      "imageAlt": "Example image 6",
+      "beds": 4,
+      "baths": 3,
+      "title": "Luxurious villa with private pool",
+      "formattedPrice": "$3,500.00",
+      "reviewCount": 55,
+      "rating": 4.9
+    },
+    {
+      "id": 16,
+      "imageUrl": "https://cdn.pixabay.com/photo/2017/07/11/22/16/resort-2495223_640.jpg",
+      "imageAlt": "Example image 7",
+      "beds": 3,
+      "baths": 2,
+      "title": "Charming cottage in the countryside",
+      "formattedPrice": "$1,500.00",
+      "reviewCount": 16,
+      "rating": 3.9
+    },
+    {
+      "id": 17,
+      "imageUrl": "https://cdn.pixabay.com/photo/2017/07/11/22/16/resort-2495223_640.jpg",
+      "imageAlt": "Example image 8",
+      "beds": 5,
+      "baths": 4,
+      "title": "Elegant mansion with panoramic views",
+      "formattedPrice": "$5,000.00",
+      "reviewCount": 67,
+      "rating": 4.7
+    },
+    {
+      "id": 18,
+      "imageUrl": "https://cdn.pixabay.com/photo/2017/07/11/22/16/resort-2495223_640.jpg",
+      "imageAlt": "Example image 9",
+      "beds": 2,
+      "baths": 1,
+      "title": "Quaint bungalow near the beach",
+      "formattedPrice": "$1,100.00",
+      "reviewCount": 14,
+      "rating": 3.3
+    },
+    {
+      "id": 19,
+      "imageUrl": "https://cdn.pixabay.com/photo/2017/07/11/22/16/resort-2495223_640.jpg",
+      "imageAlt": "Example image 10",
+      "beds": 3,
+      "baths": 2,
+      "title": "Contemporary loft in the city",
+      "formattedPrice": "$1,700.00",
+      "reviewCount": 23,
+      "rating": 4.3
+    },
+    {
+      "id": 20,
+      "imageUrl": "https://cdn.pixabay.com/photo/2017/07/11/22/16/resort-2495223_640.jpg",
+      "imageAlt": "Example image 11",
+      "beds": 4,
+      "baths": 3,
+      "title": "Spacious townhouse with rooftop terrace",
+      "formattedPrice": "$2,800.00",
+      "reviewCount": 42,
+      "rating": 4.5
+    },
+    {
+      "id": 21,
+      "imageUrl": "https://cdn.pixabay.com/photo/2017/07/11/22/16/resort-2495223_640.jpg",
+      "imageAlt": "Example image 12",
+      "beds": 2,
+      "baths": 1,
+      "title": "Modern apartment near the park",
+      "formattedPrice": "$1,400.00",
+      "reviewCount": 15,
+      "rating": 3.9
+    },
+    {
+      "id": 22,
+      "imageUrl": "https://bit.ly/2Z4KKcF",
+      "imageAlt": "Rear view of modern home with pool",
+      "beds": 3,
+      "baths": 2,
+      "title": "Modern home in city center in the heart of historic Los Angeles",
+      "formattedPrice": "$1,900.00",
+      "reviewCount": 34,
+      "rating": 4
+    },
+    {
+      "id": 23,
+      "imageUrl": "https://cdn.pixabay.com/photo/2015/03/09/18/34/beach-666122_1280.jpg",
+      "imageAlt": "Example image 1",
+      "beds": 2,
+      "baths": 1,
+      "title": "Cozy apartment in downtown",
+      "formattedPrice": "$1,200.00",
+      "reviewCount": 12,
+      "rating": 3.5
+    },
+    {
+      "id": 24,
+      "imageUrl": "https://cdn.pixabay.com/photo/2015/03/09/18/34/beach-666122_1280.jpg",
+      "imageAlt": "Example image 2",
+      "beds": 4,
+      "baths": 3,
+      "title": "Spacious house with a garden",
+      "formattedPrice": "$2,500.00",
+      "reviewCount": 45,
+      "rating": 4.8
+    },
+    {
+      "id": 25,
+      "imageUrl": "https://cdn.pixabay.com/photo/2019/09/12/15/21/resort-4471852_640.jpg",
+      "imageAlt": "Example image 3",
+      "beds": 1,
+      "baths": 1,
+      "title": "Studio apartment in vibrant neighborhood",
+      "formattedPrice": "$900.00",
+      "reviewCount": 8,
+      "rating": 3.2
+    },
+    {
+      "id": 26,
+      "imageUrl": "https://cdn.pixabay.com/photo/2020/10/21/12/21/sea-bridge-5672967_640.jpg",
+      "imageAlt": "Example image 4",
+      "beds": 3,
+      "baths": 2,
+      "title": "Family-friendly house with backyard",
+      "formattedPrice": "$2,200.00",
+      "reviewCount": 20,
+      "rating": 4.2
+    },
+    {
+      "id": 27,
+      "imageUrl": "https://cdn.pixabay.com/photo/2016/09/26/11/26/resort-1695717_640.jpg",
+      "imageAlt": "Example image 5",
+      "beds": 2,
+      "baths": 2,
+      "title": "Apartment with stunning ocean view",
+      "formattedPrice": "$1,800.00",
+      "reviewCount": 28,
+      "rating": 4.6
+    },
+    {
+      "id": 28,
+      "imageUrl": "https://cdn.pixabay.com/photo/2021/12/11/07/59/hotel-6862159_640.jpg",
+      "imageAlt": "Example image 6",
+      "beds": 4,
+      "baths": 3,
+      "title": "Luxurious villa with private pool",
+      "formattedPrice": "$3,500.00",
+      "reviewCount": 55,
+      "rating": 4.9
+    },
+    {
+      "id": 29,
+      "imageUrl": "https://cdn.pixabay.com/photo/2016/11/08/04/46/jetty-1807471_640.jpg",
+      "imageAlt": "Example image 7",
+      "beds": 3,
+      "baths": 2,
+      "title": "Charming cottage in the countryside",
+      "formattedPrice": "$1,500.00",
+      "reviewCount": 16,
+      "rating": 3.8
+    },
+    {
+      "id": 30,
+      "imageUrl": "https://cdn.pixabay.com/photo/2014/01/02/10/14/beach-hut-237489_640.jpg",
+      "imageAlt": "Rear view of modern home with pool",
+      "beds": 3,
+      "baths": 2,
+      "title": "Modern home in city center in the heart of historic Los Angeles",
+      "formattedPrice": "$1,900.00",
+      "reviewCount": 34,
+      "rating": 4
+    },
+    {
+      "id": 31,
+      "imageUrl": "https://cdn.pixabay.com/photo/2017/03/09/06/30/pool-2128578_640.jpg",
+      "imageAlt": "Example image 1",
+      "beds": 2,
+      "baths": 1,
+      "title": "Cozy apartment in downtown",
+      "formattedPrice": "$1,200.00",
+      "reviewCount": 12,
+      "rating": 3.5
+    },
+    {
+      "id": 32,
+      "imageUrl": "https://cdn.pixabay.com/photo/2014/02/08/04/55/maldives-261506_640.jpg",
+      "imageAlt": "Example image 2",
+      "beds": 4,
+      "baths": 3,
+      "title": "Spacious house with a garden",
+      "formattedPrice": "$2,500.00",
+      "reviewCount": 45,
+      "rating": 4.8
+    },
+    {
+      "id": 33,
+      "imageUrl": "https://cdn.pixabay.com/photo/2014/02/08/04/55/maldives-261506_640.jpg",
+      "imageAlt": "Example image 3",
+      "beds": 1,
+      "baths": 1,
+      "title": "Studio apartment in vibrant neighborhood",
+      "formattedPrice": "$900.00",
+      "reviewCount": 8,
+      "rating": 3.2
+    },
+    {
+      "id": 34,
+      "imageUrl": "https://cdn.pixabay.com/photo/2014/02/08/04/55/maldives-261506_640.jpg",
+      "imageAlt": "Example image 4",
+      "beds": 3,
+      "baths": 2,
+      "title": "Family-friendly house with backyard",
+      "formattedPrice": "$2,200.00",
+      "reviewCount": 20,
+      "rating": 4.2
+    },
+    {
+      "id": 35,
+      "imageUrl": "https://cdn.pixabay.com/photo/2014/02/08/04/55/maldives-261506_640.jpg",
+      "imageAlt": "Example image 5",
+      "beds": 2,
+      "baths": 2,
+      "title": "Apartment with stunning ocean view",
+      "formattedPrice": "$1,800.00",
+      "reviewCount": 28,
+      "rating": 4.6
+    },
+    {
+      "id": 36,
+      "imageUrl": "https://cdn.pixabay.com/photo/2014/02/08/04/55/maldives-261506_640.jpg",
+      "imageAlt": "Example image 6",
+      "beds": 4,
+      "baths": 3,
+      "title": "Luxurious villa with private pool",
+      "formattedPrice": "$3,500.00",
+      "reviewCount": 55,
+      "rating": 4.9
+    },
+    {
+      "id": 37,
+      "imageUrl": "https://cdn.pixabay.com/photo/2017/07/11/22/16/resort-2495223_640.jpg",
+      "imageAlt": "Example image 7",
+      "beds": 3,
+      "baths": 2,
+      "title": "Charming cottage in the countryside",
+      "formattedPrice": "$1,500.00",
+      "reviewCount": 16,
+      "rating": 3.9
+    },
+    {
+      "id": 38,
+      "imageUrl": "https://cdn.pixabay.com/photo/2017/07/11/22/16/resort-2495223_640.jpg",
+      "imageAlt": "Example image 8",
+      "beds": 5,
+      "baths": 4,
+      "title": "Elegant mansion with panoramic views",
+      "formattedPrice": "$5,000.00",
+      "reviewCount": 67,
+      "rating": 4.7
+    },
+    {
+      "id": 39,
+      "imageUrl": "https://cdn.pixabay.com/photo/2017/07/11/22/16/resort-2495223_640.jpg",
+      "imageAlt": "Example image 9",
+      "beds": 2,
+      "baths": 1,
+      "title": "Quaint bungalow near the beach",
+      "formattedPrice": "$1,100.00",
+      "reviewCount": 14,
+      "rating": 3.3
+    },
+    {
+      "id": 40,
+      "imageUrl": "https://cdn.pixabay.com/photo/2017/07/11/22/16/resort-2495223_640.jpg",
+      "imageAlt": "Example image 10",
+      "beds": 3,
+      "baths": 2,
+      "title": "Contemporary loft in the city",
+      "formattedPrice": "$1,700.00",
+      "reviewCount": 23,
+      "rating": 4.3
+    },
+    {
+      "id": 41,
+      "imageUrl": "https://cdn.pixabay.com/photo/2017/07/11/22/16/resort-2495223_640.jpg",
+      "imageAlt": "Example image 11",
+      "beds": 4,
+      "baths": 3,
+      "title": "Spacious townhouse with rooftop terrace",
+      "formattedPrice": "$2,800.00",
+      "reviewCount": 42,
+      "rating": 4.5
+    },
+    {
+      "id": 42,
+      "imageUrl": "https://cdn.pixabay.com/photo/2017/07/11/22/16/resort-2495223_640.jpg",
+      "imageAlt": "Example image 12",
+      "beds": 2,
+      "baths": 1,
+      "title": "Modern apartment near the park",
+      "formattedPrice": "$1,400.00",
+      "reviewCount": 15,
+      "rating": 3.9
+    }
+  ]
+}
