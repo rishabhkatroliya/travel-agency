@@ -1,6 +1,8 @@
 import React from 'react'
 import {Routes,Route} from "react-router-dom";
 import Home from '../Components/Home/Home';
+import Signup from '../Components/LoginPage/Signup';
+import Login from '../Components/LoginPage/Login';
 
 const AllRoutes = () => {
   return (
