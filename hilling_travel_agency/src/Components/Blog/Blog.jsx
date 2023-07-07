@@ -1,14 +1,16 @@
 import React from 'react';
 import axios from "axios";
-import BackgroundImg from "./Images/BackgroundImg.jpeg";
-import kana from "./Images/kana.webp";
-import camping from "./Images/camping.webp";
-import desert from "./Images/desert.webp";
-import eropa from "./Images/eropa.jpg";
-import asia from "./Images/asia.jpg";
-import hiking from "./Images/hiking.jpg";
-import oasis from "./Images/oasis.webp";
-import historical from "./Images/historical.webp";
+import Shimla from "./Images/Shimla.jpg";
+import Darjiling from "./Images/Darjiling.jpg";
+import Kasauli from "./Images/Kasauli.jpg";
+import Khandala from "./Images/Khandala.jpeg";
+import kullu from "./Images/kullu.jpg";
+import leh from "./Images/leh.jpg";
+import lonawala from "./Images/lonawala.jpeg";
+import Nainital from "./Images/Nainital.webp";
+import Nature from "./Images/Nature.jpg"
+
+import {data} from "./Data/data";
 import {
     Box,
     Flex,
@@ -30,19 +32,20 @@ import { SearchIcon } from "@chakra-ui/icons";
 
 
 const Blog = () => {
-    const[data,setData] = React.useState([]);
+    // const[data,setData] = React.useState([]);
      
-      const fetchData = async () => {
-        const res = await axios.get("http://localhost:8080/property");
-        setData(res.data);
-      };
-    React.useEffect(()=>{
-        fetchData();
-    },[]);
+    //   const fetchData = async () => {
+    //     const res = await axios.get("http://localhost:8080/blog");
+    //     setData(res.data);
+    //   };
+    // React.useEffect(()=>{
+    //     fetchData();
+    // },[]);
 
     return (
-        <Box backgroundImage={BackgroundImg} fontSize={"16px"} h={"90vh"} backgroundSize={"cover"} backgroundPosition={"center center"} ml={"60px"} mr={"60px"} w={{ base: "100%", md: "90%" }} borderBottomLeftRadius={"30%"} borderBottomRightRadius={"30%"}>
-            <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
+        <Box backgroundImage={Nature} backgroundColor={"rgb(124, 141, 211)"} fontSize={"16px"} h={"90vh"} backgroundSize={"cover"} backgroundPosition={"center center"} >
+            
+            {/* <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
                 <Link
                     textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
                     fontFamily={'heading'}
@@ -136,61 +139,61 @@ const Blog = () => {
                         CONTACT US
                     </Link>
                 </HStack>
-            </Flex>
+            </Flex> */}
             <Box>
                 <div justifyContent={"center"} >
-                    <Heading color={"white"} mt={"1em"} fontSize={"48px"} fontWeight={"700"}>Destinations</Heading>
-                    <Heading color={"white"} fontSize={"30px"} mt={".3em"} >Amazing Destinations in the World</Heading>
+                    <Heading color={"white"} fontSize={"48px"} fontWeight={"700"} pt={"1em"}>Destinations</Heading>
+                    <Heading color={"white"} fontSize={"30px"} mt={".3em"} >Amazing Destinations in India</Heading>
                 </div>
             </Box>
             <Flex mt={"50px"} justifyContent={"center"} alignItems={"center"} >
                 <Flex background={"#EDF2F7"} boxShadow={"0 4px 6px -1px rgba(0, 0, 0, 0.1),0 2px 4px -1px rgba(0, 0, 0, 0.06)"} flexDirection={"row"} justifyContent={"center"}  padding={"1rem"} borderRadius={"0.375em"}>
-                    <Input type="text" _placeholder={{color:"teal"}} placeholder="Search destination" name="searchTerm" color={"teal"} width={"29%"}/>&nbsp;&nbsp;
-                    <Input type="date" placeholder="Check In Date" name="checkInDate" color={"teal"} width={"29%"} />&nbsp;&nbsp;
-                    <Input type="number"  _placeholder={{color:"teal"}} placeholder="Add Guests" name="guests" color={"teal"} width={"29%"}  />&nbsp;&nbsp;
-<Button type="button" aria-label={"Search"} background={"#319795"} color={"white"} p={"1px"}><SearchIcon/></Button>
+                    <Input type="text" _placeholder={{color:"rgb(124, 141, 211)"}} placeholder="Search destination" name="searchTerm" color={"rgb(124, 141, 211)"} width={"29%"}/>&nbsp;&nbsp;
+                    <Input type="date" placeholder="Check In Date" name="checkInDate" color={"rgb(124, 141, 211)"} width={"29%"} />&nbsp;&nbsp;
+                    <Input type="number"  _placeholder={{color:"rgb(124, 141, 211)"}} placeholder="Add Guests" name="guests" color={"rgb(124, 141, 211)"} width={"29%"}  />&nbsp;&nbsp;
+<Button type="button" aria-label={"Search"} background={"rgb(124, 141, 211)"} color={"white"} p={"1px"}><SearchIcon/></Button>
                 </Flex>
             </Flex>
-            <Grid w={"70%"} h={"200px"} ml={"15%"} mt={"70px"}>
-<Flex direction={"row"} background={"#DD6B20"} h={"80px"}  borderRadius={"0.375em"} color={"white"} borderWidth={"1px"} overflow={"hidden"} borderStyle={"solid"}>
-<Img w={"9%"} objectFit={"cover"} src={kana} />
+            <Grid w={"70%"} h={"200px"} ml={"15%"} mt={"340px"} >
+<Flex direction={"row"} background={"rgb(124, 141, 211)"} h={"80px"}  borderRadius={"0.375em"} color={"white"} borderWidth={"1px"} overflow={"hidden"} borderStyle={"solid"}>
+<Img w={"9%"} objectFit={"cover"} src={Shimla} />
 <div>
-<Heading  p={"1em"} fontSize={"20px"} mr={"2px"}>Kana Package</Heading>
+<Heading  p={"1em"} fontSize={"20px"} mr={"2px"}>Shimla Package</Heading>
 </div>
-<Img w={"9%"} objectFit={"cover"} src={historical} />
+<Img w={"9%"} objectFit={"cover"} src={Darjiling} />
 <div>
-<Heading p={"1em"} fontSize={"20px"}>Historical Package</Heading>
+<Heading p={"1em"} fontSize={"20px"}>Darjiling Package</Heading>
 </div>
-<Img w={"9%"} objectFit={"cover"} src={desert} />
+<Img w={"9%"} objectFit={"cover"} src={Kasauli} />
 <div>
-<Heading p={"1em"} fontSize={"20px"}>Desert Package</Heading>
+<Heading p={"1em"} fontSize={"20px"}>Kasauli Package</Heading>
 </div>
-<Img w={"9%"} objectFit={"cover"} src={camping} />
+<Img w={"9%"} objectFit={"cover"} src={Khandala} />
 <div>
-<Heading p={"1em"} fontSize={"20px"}>Camping Package</Heading>
+<Heading p={"1em"} fontSize={"20px"}>Khandala Package</Heading>
 </div>
 </Flex>
 
-<Flex direction={"row"} background={"#DD6B20"} h={"80px"} borderRadius={"0.375em"} color={"white"} borderWidth={"1px"} overflow={"hidden"} borderStyle={"solid"}>
-<Img w={"9%"} objectFit={"cover"} src={oasis} />
+<Flex direction={"row"} background={"rgb(124, 141, 211)"} h={"80px"} borderRadius={"0.375em"} color={"white"} borderWidth={"1px"} overflow={"hidden"} borderStyle={"solid"}>
+<Img w={"9%"} objectFit={"cover"} src={kullu} />
 <div>
-<Heading  p={"1em"} fontSize={"20px"} mr={"2px"}>Oasis Package</Heading>
+<Heading  p={"1em"} fontSize={"20px"} mr={"2px"}>Kullu Package</Heading>
 </div>
-<Img w={"9%"} objectFit={"cover"} src={hiking} />
+<Img w={"9%"} objectFit={"cover"} src={leh} />
 <div>
-<Heading p={"1em"} fontSize={"20px"}>Hiking Package</Heading>
+<Heading p={"1em"} fontSize={"20px"}>Leh Package</Heading>
 </div>
-<Img w={"9%"} objectFit={"cover"} src={eropa} />
+<Img w={"9%"} objectFit={"cover"} src={lonawala} />
 <div>
-<Heading p={"1em"} fontSize={"20px"}>Eropa Destination</Heading>
+<Heading p={"1em"} fontSize={"20px"}>Lonawala Package</Heading>
 </div>
-<Img w={"9%"} objectFit={"cover"} src={asia} />
+<Img w={"9%"} objectFit={"cover"} src={Nainital} />
 <div>
-<Heading p={"1em"} fontSize={"20px"}>Asia Destination</Heading>
+<Heading p={"1em"} fontSize={"20px"}>Nainital Package</Heading>
 </div>
 </Flex>
             </Grid>
-            <Box mt={"200px"}>
+            <Box mt={"50px"}  backgroundColor={"rgb(124, 141, 211)"}>
                 <Flex justifyContent={"center"}>
                 <Grid templateColumns='repeat(4, 1fr)'>
 {data.map((post)=>{
@@ -227,7 +230,7 @@ const Blog = () => {
         <Text as="p" fontSize="md" marginTop="2">
         {post.desc}
         </Text>
-        <Button background={"#319795"} mt={"1em"} color={"white"}>Read More</Button>
+        <Button background={"rgb(124, 141, 211)"} mt={"1em"} color={"white"}><a href={post.readMore}>Read More</a></Button>
       </Box>
     </WrapItem>
   </Wrap>

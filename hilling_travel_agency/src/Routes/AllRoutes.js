@@ -1,6 +1,7 @@
 import React from 'react'
 import {Routes,Route} from "react-router-dom";
 import Home from '../Components/Home/Home';
+import Blog from '../Components/Blog/Blog';
 
 const AllRoutes = () => {
   return (
@@ -16,7 +17,7 @@ const AllRoutes = () => {
         <Route path='/address' element={""}>Address</Route>  {/* Akhil*/}
         <Route path='/payment' element={""}>Payment</Route>  {/* Akhil*/}
 
-        <Route path='/blog' element={""}>Home</Route> {/*Rishabh */}
+        <Route path='/blog' element={<Blog />}>Blog</Route> {/*Rishabh */}
    </Routes> 
   )
 }
