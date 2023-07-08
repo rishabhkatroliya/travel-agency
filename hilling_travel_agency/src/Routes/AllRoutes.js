@@ -24,11 +24,11 @@ const AllRoutes = () => {
         Product Details page
       </Route>{" "}
       {/* gaurav*/}
-      <Route path="/signup" element={""}>
+      <Route path="/signup" element={<Signup />}>
         Signup
       </Route>{" "}
       {/* Akash*/}
-      <Route path="/login" element={""}>
+      <Route path="/login" element={<Login />}>
         Login
       </Route>{" "}
       {/* Akash*/}
