@@ -163,11 +163,11 @@ import {
                 <Button
                   loadingText="Submitting"
                   size="lg"
-                  bg={'blue.400'}
+                  bg={'blue.500'}
                   color={'white'}
                   onClick={handleSignup}
                   _hover={{
-                    bg: 'blue.500',
+                    bg: 'blue.600',
 
                   }}>
                   Sign up
