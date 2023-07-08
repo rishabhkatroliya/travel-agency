@@ -6,7 +6,7 @@ import Kasauli from "./Images/Kasauli.jpg";
 import Khandala from "./Images/Khandala.jpeg";
 import kullu from "./Images/kullu.jpg";
 import leh from "./Images/leh.jpg";
-import Lonawala from "./Images/Lonawala.jpeg";
+import lonawala from "./Images/lonawala.jpeg";
 import Nainital from "./Images/Nainital.webp";
 import Nature from "./Images/Nature.jpg"
 // import { data } from "./Data/data";
@@ -82,7 +82,7 @@ const Blog = () => {
                             <Heading p={"1em"} fontSize={"20px"}><a href="">Leh Package</a></Heading>
                         </div>
                    
-                        <Img w={"9%"} objectFit={"cover"} src={Lonawala} />
+                        <Img w={"9%"} objectFit={"cover"} src={lonawala} />
                         <div>
                             <Heading p={"1em"} fontSize={"20px"}><a href="">Lonavala Package</a></Heading>
                         </div>
