@@ -9,6 +9,8 @@ import {
     Heading,
     Link,
     Button,
+    FormControl,
+    FormLabel,
     Grid,
     Img,
     Text,
@@ -16,13 +18,21 @@ import {
     Image,
     WrapItem
 } from '@chakra-ui/react';
-import Nature from "./Images/Nature.jpg"
+import {useNavigate} from "react-router-dom"
 
 const BlogPost = () => {
     const[data,setData] = React.useState({});
+    const Navigate = useNavigate();
       const fetchData = async (e) => {
         e.preventDefault();
         const res = await axios.post(`http://localhost:8080/blog`,data);
+        console.log(res);
+        if(res.status == 201){
+Navigate("/blog")
+        }
+        else{
+          alert("Some error occured. Please try again.")
+        }
        
       };
       const handleClick = (e)=>{
@@ -31,16 +41,38 @@ setData({...data,[e.target.name]:e.target.value})
       }
 
     return (
-        <Box backgroundImage={Nature} fontSize={"16px"} w={"100%"} float={"left"} h={"450px"}>
+        <Box fontSize={"16px"} w={"100%"} float={"left"} p={"20px"}>
 
           <form onSubmit={fetchData}>
-                
+          <FormControl>
+  <FormLabel>Blog Name : </FormLabel>
+  <Input type='text' name="name" placeholder='Enter Blog Name' onChange={(e)=>handleClick(e)} mb={"15px"} />
+  <FormLabel>Author Name :  </FormLabel>
+  <Input type='text'  name="author" placeholder='Enter Author Name' onChange={(e)=>handleClick(e)}  mb={"15px"} />
+  <FormLabel>Date :  </FormLabel>
+  <Input type="date" name="date" placeholder='dd/mm/yyyy' onChange={(e)=>handleClick(e)} mb={"15px"}  />
+  <FormLabel>Image URL :  </FormLabel>
+  <Input type="text" name="img" placeholder='Enter Image URL' onChange={(e)=>handleClick(e)} mb={"15px"}  />
+  <FormLabel>Description :  </FormLabel>
+  <Input type="text" name="desc" placeholder='Enter Description' onChange={(e)=>handleClick(e)} mb={"15px"}  />
+  <Button
+            mt={4}
+            color="white"
+            backgroundColor={"rgb(124, 141, 211)"}
+            type='submit'
+            
+          >
+            Add Blog
+          </Button>
+</FormControl>
+
+{/*                 
 <label>Blog Name : </label> <Input type="text" name="name" placeholder='Enter Blog Name' onChange={(e)=>handleClick(e)} w={"80%"} mt={"1em"} mb={"1em"}/><br/>
 <label>Author Name : </label><Input type="text" name="author" placeholder='Enter Author Name' onChange={(e)=>handleClick(e)} w={"80%"} mb={"1em"} /><br/>
 <label>Date : </label>  <Input type="date" name="date" placeholder='dd/mm/yyyy' onChange={(e)=>handleClick(e)} w={"80%"} mb={"1em"}/><br/>
-<label>Image URL : </label>  <Input type="text" name="img" placeholder='Enter Image URL' onChange={(e)=>handleClick(e)} w={"80%"} mb={"1em"}/><br/>
-<label>Description : </label> <Input type="text" name="desc" placeholder='Enter Description' onChange={(e)=>handleClick(e)} w={"80%"} mb={"1em"} /><br/>
-<Button type="submit" backgroundColor={"rgb(124, 141, 211)"} color="white">ADD BLOG</Button>
+<label>Image URL : </label>  <Input type="text" name="img" placeholder='Enter Image URL' onChange={(e)=>handleClick(e)} w={"80%"} mb={"1em"}/><br/> */}
+{/* <label>Description : </label> <Input type="text" name="desc" placeholder='Enter Description' onChange={(e)=>handleClick(e)} w={"80%"} mb={"1em"} /><br/> */}
+{/* <Button type="submit" backgroundColor={"rgb(124, 141, 211)"} color="white">ADD BLOG</Button> */}
           </form>
         </Box>
     )
