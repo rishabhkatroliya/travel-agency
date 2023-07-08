@@ -1,9 +1,14 @@
 import React from 'react'
 import {Routes,Route} from "react-router-dom";
 import Home from '../Components/Home/Home';
+<<<<<<< HEAD
+import Signup from '../Components/LoginPage/Signup';
+import Login from '../Components/LoginPage/Login';
+=======
 import Blog from '../Components/Blog/Blog';
 import BlogPost from '../Components/Blog/BlogPost';
 import AddBlog from '../Components/Blog/AddBlog';
+>>>>>>> c167e25a8cb925b6c57b0de39ab9eb930c12d1df
 
 const AllRoutes = () => {
   return (
