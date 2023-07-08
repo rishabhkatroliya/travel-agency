@@ -25,7 +25,7 @@ const OurWorld = () => {
   const [searchResults, setSearchResults] = useState([]);
 
   const fetchData = async () => {
-    const res = await axios.get("http://localhost:8080/property");
+    const res = await axios.get("https://database-aliu.onrender.com/property");
     setProperties(res.data);
   };
 
@@ -68,6 +68,14 @@ const OurWorld = () => {
     }
   });
 
+  // useEffect(() => {
+  //   const delayDebounceFn = setTimeout(() => {
+  //     fetchData();
+  //   }, 1000);
+
+  //   return () => clearTimeout(delayDebounceFn);
+  // }, [setSearchTerm]);
+
   useEffect(() => {
     fetchData();
   }, [searchResults]);
@@ -75,25 +83,32 @@ const OurWorld = () => {
   return (
     <>
       <Box
-        p={"90px 210px"}
+        p={{ base: "40px 20px", md: "90px 210px" }}
         backgroundColor={"rgb(124, 141, 211)"}
         textAlign={"left"}
       >
         <Box color={"white"}>
-          <Text fontSize="5xl" fontWeight={700}>
+          <Text fontSize={{ base: "3xl", md: "5xl" }} fontWeight={700}>
             Find your next stay
           </Text>
-          <Text fontSize="3xl">
+          <Text fontSize={{ base: "2xl", md: "3xl" }}>
             Search low prices on hotels, homes and much more...
           </Text>
         </Box>
         <Center mt="50px">
           <Box h="69px">
-            <HStack bg={"white"} p="3px" borderRadius={"10px"} gap={"2px"}>
+            <HStack
+              bg={"white"}
+              p="3px"
+              borderRadius={"10px"}
+              gap={"2px"}
+              direction={{ base: "column", md: "row" }}
+              spacing={{ base: "10px", md: "2px" }}
+            >
               <Input
                 borderWidth="3px"
                 borderColor="gray.300"
-                width="30%"
+                width={{ base: "100%", md: "30%" }}
                 variant={"outline"}
                 placeholder="Where are you going?"
                 size="lg"
@@ -104,7 +119,7 @@ const OurWorld = () => {
               <Input
                 borderWidth="3px"
                 borderColor="gray.300"
-                width="382px"
+                width={{ base: "100%", md: "382px" }}
                 placeholder="Select Date and Time"
                 size="lg"
                 type="date"
@@ -113,7 +128,7 @@ const OurWorld = () => {
               <Input
                 borderWidth="3px"
                 borderColor="gray.300"
-                width="350px"
+                width={{ base: "100%", md: "350px" }}
                 placeholder="No of persons "
                 size="lg"
                 bg="white"
@@ -123,8 +138,8 @@ const OurWorld = () => {
                 size="lg"
                 backgroundColor={"orange"}
                 color={"white"}
-                padding={"2px"}
-                width={"130px"}
+                padding={{ base: "5px", md: "2px" }}
+                width={{ base: "100%", md: "130px" }}
                 borderRadius={"8px"}
                 onClick={handleSearch}
               >
@@ -133,16 +148,22 @@ const OurWorld = () => {
             </HStack>
             {/* <Center> */}
             <HStack mt="50px">
-              <Text fontSize="3xl" mr="30px" color={"white"} fontWeight={"600"}>
+              <Text
+                fontSize="3xl"
+                mr="30px"
+                color={"white"}
+                fontWeight={"600"}
+                direction={{ base: "column", md: "row" }}
+              >
                 Sort by:{" "}
               </Text>
               <Select
                 borderWidth="3px"
                 borderColor="gray.300"
-                width="250px"
+                width={{ base: "100%", md: "250px" }}
                 placeholder="Sort by Price"
                 size="lg"
-                fontSize={"20px"}
+                fontSize={{ base: "16px", md: "20px" }}
                 value={filterByPrice}
                 onChange={handleFilterByPrice}
               >
@@ -153,10 +174,10 @@ const OurWorld = () => {
               <Select
                 borderWidth="3px"
                 borderColor="gray.300"
-                width="250px"
+                width={{ base: "100%", md: "250px" }}
                 placeholder="Sort by Ratings"
                 size="lg"
-                fontSize={"20px"}
+                fontSize={{ base: "16px", md: "20px" }}
                 value={filterByRating}
                 onChange={handleFilterByRating}
               >
@@ -176,8 +197,12 @@ const OurWorld = () => {
         </Text>
       </Stack>
       <Grid
+      paddingTop={"40px"}
         templateColumns="repeat(3, 1fr)"
         gap={1}
+        columns={{ base: 1, sm: 2, md: 3 }}
+        spacing={1}
+        // mt={{ base: 4, md: 8 }}
         //  padding="50px 80px"
       >
         {sortedProperties.map((property) => (
@@ -256,7 +281,7 @@ const OurWorld = () => {
                   <Box as="span" ml="2" color="gray.600" fontSize="sm">
                     {property.reviewCount} reviews
                   </Box>
-                  <Link to={`/ourwords/${property.id}`}>
+                  <Link to={`/ourworlds/${property.id}`}>
                     <Button
                       ml={"80px"}
                       fontSize={"20px"}

@@ -24,7 +24,7 @@ import Logo from "./Images/Logo.jpg";
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
 
-  const linkColor = useColorModeValue('gray.600', 'gray.200');
+  const linkColor = useColorModeValue('white', 'gray.200');
   const linkHoverColor = useColorModeValue('gray.800', 'white');
   const popoverContentBgColor = useColorModeValue('white', 'gray.800');
 
@@ -32,7 +32,7 @@ export default function Navbar() {
     <Box>
       <Flex
         backgroundColor={useColorModeValue('rgb(124, 141, 211)', 'gray.800')}
-        color={useColorModeValue('gray.600', 'white')}
+        color={useColorModeValue('white', 'white')}
         minH={'60px'}
         py={{ base: 2 }}
         px={{ base: 4 }}
@@ -84,11 +84,12 @@ export default function Navbar() {
           <Button
             as={'a'}
             fontSize={'sm'}
-            fontWeight={400}
+            fontWeight={600}
             variant={'link'}
             href={'#'}
+            color={"white"}
           >
-            Sign In
+           <ReactRouterLink to="/login"> Sign In</ReactRouterLink>
           </Button>
           <Button
             display={{ base: 'none', md: 'inline-flex' }}
@@ -101,7 +102,7 @@ export default function Navbar() {
               bg: 'pink.300',
             }}
           >
-            Sign Up
+           <ReactRouterLink to="/signup"> Sign Up</ReactRouterLink>
           </Button>
         </Stack>
       </Flex>
@@ -222,7 +223,7 @@ const MobileNavItem = ({ label, children, href }) => {
       >
         <Text
           fontWeight={600}
-          color={useColorModeValue('gray.600', 'gray.200')}
+          color={useColorModeValue('white', 'gray.200')}
         >
           {label}
         </Text>
@@ -264,31 +265,17 @@ const NAV_ITEMS = [
     href: '/',
   },
   {
-    label: 'About',
-    href: '/about',
+    label: 'Blog',
+    href: '/blog',
   },
+  
   {
     label: 'Services',
-    children: [
-      {
-        label: 'Web Design',
-        subLabel: 'UI/UX Design',
-        href: '/web-design',
-      },
-      {
-        label: 'Mobile App Development',
-        subLabel: 'iOS & Android',
-        href: '/mobile-app',
-      },
-      {
-        label: 'Branding',
-        subLabel: 'Logo Design & More',
-        href: '/branding',
-      },
-    ],
+   href:'/ourworlds'
   },
   {
-    label: 'Contact',
-    href: '/contact',
+    label: 'About',
+    href: '/',
   },
+  
 ];
