@@ -3,6 +3,11 @@ import { Routes, Route } from "react-router-dom";
 import Home from "../Components/Home/Home";
 import OurWorld from "../Components/OurWorld/OurWorld";
 import OurWorldDetails from "../Components/OurWorld/OurWorldDetails";
+import Signup from "../Components/LoginPage/Signup";
+import Login from "../Components/LoginPage/Login";
+import Blog from "../Components/Blog/Blog";
+import BlogPost from "../Components/Blog/BlogPost";
+import AddBlog from "../Components/Blog/AddBlog";
 
 const AllRoutes = () => {
   return (
@@ -35,8 +40,16 @@ const AllRoutes = () => {
         Payment
       </Route>{" "}
       {/* Akhil*/}
-      <Route path="/blog" element={""}>
-        Home
+      <Route path="/blog" element={<Blog />}>
+        Blog
+      </Route>{" "}
+      {/*Rishabh */}
+      <Route path="/blog/:id" element={<BlogPost />}>
+        BlogPost
+      </Route>{" "}
+      {/*Rishabh */}
+      <Route path="/addBlog" element={<AddBlog />}>
+        Add Blog
       </Route>{" "}
       {/*Rishabh */}
     </Routes>

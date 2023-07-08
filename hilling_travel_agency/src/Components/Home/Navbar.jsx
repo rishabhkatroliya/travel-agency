@@ -264,9 +264,14 @@ const NAV_ITEMS = [
     href: '/',
   },
   {
+    label: 'Blog',
+    href: '/blog',
+  },
+  {
     label: 'About',
     href: '/about',
   },
+  
   {
     label: 'Services',
     children: [
@@ -291,4 +296,5 @@ const NAV_ITEMS = [
     label: 'Contact',
     href: '/contact',
   },
+
 ];
