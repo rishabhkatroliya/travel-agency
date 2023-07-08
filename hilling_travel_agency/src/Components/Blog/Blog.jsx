@@ -25,11 +25,12 @@ import {
     WrapItem
 } from '@chakra-ui/react';
 import {Link} from "react-router-dom";
+import Footer from '../Home/Footer';
 const Blog = () => {
     const[data,setData] = React.useState([]);
 
       const fetchData = async () => {
-        const res = await axios.get("http://localhost:8080/blog");
+        const res = await axios.get("https://database-aliu.onrender.com/blog");
         setData(res.data);
       };
     React.useEffect(()=>{
@@ -141,6 +142,8 @@ const Blog = () => {
                     </Grid>
                 </Flex>
             </Box>
+
+            <Footer />
         </Box>
     )
 }

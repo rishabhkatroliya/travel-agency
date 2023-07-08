@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Box, Text, Button } from "@chakra-ui/react";
-import {RingLoader} from "react-spinners"
+import {RingLoader} from "react-spinners";
 import "./Loading.css"
 
 function LoadingPage() {

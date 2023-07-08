@@ -152,7 +152,7 @@ const Home = () => {
             </Box>
           </Center>
           <br />
-          <Heading color={"white"} size={"lg"}>Schedule a Plan</Heading> <br />
+          <Link to="/ourworlds"><Heading color={"white"} size={"lg"}>Schedule a Plan</Heading> <br /></Link>
           <Text color={"white"} fontSize={"small"}>Quis pretium placerat morbi <br />
             morbi arcu non lobortis neque, porta <br />
             ligula platea eget ultricies.
@@ -173,7 +173,7 @@ const Home = () => {
             </Box>
           </Center>
           <br />
-          <Heading color={"white"} size={"lg"}>Find a Destination</Heading> <br />
+          <Link to="/ourworlds"><Heading color={"white"} size={"lg"}>Find a Destination</Heading> <br /></Link>
           <Text color={"white"} fontSize={"small"}>Luctus ac et egestas sagittis a<br />
             nulla mauris id turpis vitae erat nibh <br />
             gravida convallis lorem.
@@ -193,7 +193,7 @@ const Home = () => {
             </Box>
           </Center>
           <br />
-          <Heading color={"white"} size={"lg"}>Enjoy Your Trip</Heading> <br />
+          <Link to="/ourworlds"> <Heading color={"white"} size={"lg"}>Enjoy Your Trip</Heading> <br /></Link>
           <Text color={"white"} fontSize={"small"}>Ligula dui sit integer vestibulum, Facilisis <br />
             et viverra volutpat mollis leo sapien <br />
             mauris nulla marcu.

@@ -24,7 +24,7 @@ import Logo from "./Images/Logo.jpg";
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
 
-  const linkColor = useColorModeValue('gray.600', 'gray.200');
+  const linkColor = useColorModeValue('white', 'gray.200');
   const linkHoverColor = useColorModeValue('gray.800', 'white');
   const popoverContentBgColor = useColorModeValue('white', 'gray.800');
 
@@ -32,7 +32,7 @@ export default function Navbar() {
     <Box>
       <Flex
         backgroundColor={useColorModeValue('rgb(124, 141, 211)', 'gray.800')}
-        color={useColorModeValue('gray.600', 'white')}
+        color={useColorModeValue('white', 'white')}
         minH={'60px'}
         py={{ base: 2 }}
         px={{ base: 4 }}
@@ -84,9 +84,10 @@ export default function Navbar() {
           <Button
             as={'a'}
             fontSize={'sm'}
-            fontWeight={400}
+            fontWeight={600}
             variant={'link'}
             href={'#'}
+            color={"white"}
           >
            <ReactRouterLink to="/login"> Sign In</ReactRouterLink>
           </Button>
@@ -222,7 +223,7 @@ const MobileNavItem = ({ label, children, href }) => {
       >
         <Text
           fontWeight={600}
-          color={useColorModeValue('gray.600', 'gray.200')}
+          color={useColorModeValue('white', 'gray.200')}
         >
           {label}
         </Text>

@@ -31,7 +31,7 @@ const OurWorldDetails = () => {
   }, []);
 
   const fetchData = async () => {
-    const res = await axios.get(`http://localhost:8080/property/${id}`);
+    const res = await axios.get(`https://database-aliu.onrender.com/property/${id}`);
     setProperty(res.data);
   };
   return (

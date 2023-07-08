@@ -23,7 +23,7 @@ const BlogPost = () => {
     const[post,setPost] = React.useState({});
 const {id}=useParams();
       const fetchData = async () => {
-        const res = await axios.get(`http://localhost:8080/blog/${id}`);
+        const res = await axios.get(`https://database-aliu.onrender.com/blog/${id}`);
         setPost(res.data);
       };
     React.useEffect(()=>{

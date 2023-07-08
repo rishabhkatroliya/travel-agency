@@ -25,7 +25,7 @@ const BlogPost = () => {
     const Navigate = useNavigate();
       const fetchData = async (e) => {
         e.preventDefault();
-        const res = await axios.post(`http://localhost:8080/blog`,data);
+        const res = await axios.post(`https://database-aliu.onrender.com/blog`,data);
         console.log(res);
         if(res.status == 201){
 Navigate("/blog")

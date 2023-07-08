@@ -25,7 +25,7 @@ const OurWorld = () => {
   const [searchResults, setSearchResults] = useState([]);
 
   const fetchData = async () => {
-    const res = await axios.get("http://localhost:8080/property");
+    const res = await axios.get("https://database-aliu.onrender.com/property");
     setProperties(res.data);
   };
 
@@ -68,17 +68,17 @@ const OurWorld = () => {
     }
   });
 
-  useEffect(() => {
-    const delayDebounceFn = setTimeout(() => {
-      fetchData();
-    }, 1000);
-
-    return () => clearTimeout(delayDebounceFn);
-  }, [setSearchTerm]);
-
   // useEffect(() => {
-  //   fetchData();
-  // }, [searchResults]);
+  //   const delayDebounceFn = setTimeout(() => {
+  //     fetchData();
+  //   }, 1000);
+
+  //   return () => clearTimeout(delayDebounceFn);
+  // }, [setSearchTerm]);
+
+  useEffect(() => {
+    fetchData();
+  }, [searchResults]);
 
   return (
     <>
@@ -197,6 +197,7 @@ const OurWorld = () => {
         </Text>
       </Stack>
       <Grid
+      paddingTop={"40px"}
         templateColumns="repeat(3, 1fr)"
         gap={1}
         columns={{ base: 1, sm: 2, md: 3 }}

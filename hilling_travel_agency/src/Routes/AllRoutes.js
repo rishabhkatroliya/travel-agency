@@ -8,6 +8,9 @@ import Login from "../Components/LoginPage/Login";
 import Blog from "../Components/Blog/Blog";
 import BlogPost from "../Components/Blog/BlogPost";
 import AddBlog from "../Components/Blog/AddBlog";
+import AddressPage from "../Components/paymentAndAdress/AddressPage";
+import Payment from "../Components/paymentAndAdress/Payment";
+import LoadingPage from "../Components/paymentAndAdress/LoadingPage";
 
 const AllRoutes = () => {
   return (
@@ -32,11 +35,14 @@ const AllRoutes = () => {
         Login
       </Route>{" "}
       {/* Akash*/}
-      <Route path="/address" element={""}>
+      <Route path="/address" element={<AddressPage />}>
         Address
       </Route>{" "}
       {/* Akhil*/}
-      <Route path="/payment" element={""}>
+      <Route path="/payment" element={<Payment />}>
+        Payment
+      </Route>{" "}
+      <Route path="/LoadingPage" element={<LoadingPage />}>
         Payment
       </Route>{" "}
       {/* Akhil*/}
