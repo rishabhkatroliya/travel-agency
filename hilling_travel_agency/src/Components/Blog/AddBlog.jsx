@@ -16,6 +16,7 @@ import {
     Image,
     WrapItem
 } from '@chakra-ui/react';
+import Nature from "./Images/Nature.jpg"
 
 const BlogPost = () => {
     const[data,setData] = React.useState({});
@@ -30,7 +31,7 @@ setData({...data,[e.target.name]:e.target.value})
       }
 
     return (
-        <Box fontSize={"16px"} w={"50%"} float={"left"}>
+        <Box backgroundImage={Nature} fontSize={"16px"} w={"100%"} float={"left"} h={"450px"}>
 
           <form onSubmit={fetchData}>
                 

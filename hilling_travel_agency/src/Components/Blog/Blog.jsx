@@ -97,7 +97,7 @@ const Blog = () => {
             </Grid>
             <Box mt={"100px"} >
                 <Flex justifyContent={"center"}>
-                    <Grid templateColumns='repeat(4, 1fr)'>
+                    <Grid templateColumns={{sm:"repeat(1, 1fr)",md:"repeat(2, 1fr)",lg:"repeat(4, 1fr)"}}>
                         {data.map((post) => {
                             return <Wrap spacing="30px" marginRight={"10px"} marginTop="5" p={"1rem"} w={"275px"} borderRadius={"0.375rem"} background={"#FFFAF0"} boxShadow={" 0 4px 6px -1px rgba(0, 0, 0, 0.1),0 2px 4px -1px rgba(0, 0, 0, 0.06)"}>
                                 <WrapItem width={{ base: '100%', sm: '100%', md: '100%', lg: '100%' }}>
