@@ -24,7 +24,7 @@ import logo1 from "./Images/ComLogo/logo1.jpg"
 import logo2 from "./Images/ComLogo/logo2.jpg"
 import logo3 from "./Images/ComLogo/logo3.jpg"
 import logo4 from "./Images/ComLogo/logo4.jpg"
-
+import {Link} from "react-router-dom";
 
 const Home = () => {
 
@@ -117,7 +117,7 @@ const Home = () => {
       <Button leftIcon={<ExternalLinkIcon />} backgroundColor={"orange"} color={"white"} padding={"2px"} width={"150px"} borderRadius={"10px"}
       marginTop={"50px"}
       >
-      Book a Trip
+     <Link to="/ourworlds"> Book a Trip</Link>
       </Button>
       
       <Image src={Nature} alt='nature_one' width={"100%"}></Image>

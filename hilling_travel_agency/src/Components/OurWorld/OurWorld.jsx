@@ -280,7 +280,7 @@ const OurWorld = () => {
                   <Box as="span" ml="2" color="gray.600" fontSize="sm">
                     {property.reviewCount} reviews
                   </Box>
-                  <Link to={`/ourwords/${property.id}`}>
+                  <Link to={`/ourworlds/${property.id}`}>
                     <Button
                       ml={"80px"}
                       fontSize={"20px"}

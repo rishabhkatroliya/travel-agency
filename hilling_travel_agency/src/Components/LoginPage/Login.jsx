@@ -21,7 +21,8 @@ import {
   
   export default function Login() {
 
-    const {login} =useContext(AuthContext)
+    const {login} =useContext(AuthContext);
+    const   Navigate=useNavigate();
     const toast=useToast();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -39,6 +40,8 @@ import {
             isClosable: true,
           })
           login()
+          Navigate("/")
+
           
         }else if (userData.email !==email || userData.password!==password){
           toast({

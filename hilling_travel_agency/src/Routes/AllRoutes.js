@@ -16,11 +16,11 @@ const AllRoutes = () => {
         Home
       </Route>{" "}
       {/* Shailesh*/}
-      <Route path="/ourwords" element={<OurWorld />}>
+      <Route path="/ourworlds" element={<OurWorld />}>
         service and product details page
       </Route>{" "}
       {/* gaurav*/}
-      <Route path="/ourwords/:id" element={<OurWorldDetails />}>
+      <Route path="/ourworlds/:id" element={<OurWorldDetails />}>
         Product Details page
       </Route>{" "}
       {/* gaurav*/}

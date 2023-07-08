@@ -88,7 +88,7 @@ export default function Navbar() {
             variant={'link'}
             href={'#'}
           >
-            Sign In
+           <ReactRouterLink to="/login"> Sign In</ReactRouterLink>
           </Button>
           <Button
             display={{ base: 'none', md: 'inline-flex' }}
@@ -101,7 +101,7 @@ export default function Navbar() {
               bg: 'pink.300',
             }}
           >
-            Sign Up
+           <ReactRouterLink to="/signup"> Sign Up</ReactRouterLink>
           </Button>
         </Stack>
       </Flex>
@@ -267,34 +267,14 @@ const NAV_ITEMS = [
     label: 'Blog',
     href: '/blog',
   },
-  {
-    label: 'About',
-    href: '/about',
-  },
   
   {
     label: 'Services',
-    children: [
-      {
-        label: 'Web Design',
-        subLabel: 'UI/UX Design',
-        href: '/web-design',
-      },
-      {
-        label: 'Mobile App Development',
-        subLabel: 'iOS & Android',
-        href: '/mobile-app',
-      },
-      {
-        label: 'Branding',
-        subLabel: 'Logo Design & More',
-        href: '/branding',
-      },
-    ],
+   href:'/ourworlds'
   },
   {
-    label: 'Contact',
-    href: '/contact',
+    label: 'About',
+    href: '/',
   },
-
+  
 ];
