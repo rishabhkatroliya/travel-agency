@@ -123,7 +123,7 @@ const DesktopNav = ({ linkColor, linkHoverColor, popoverContentBgColor }) => {
             <PopoverTrigger>
               <ReactRouterLink
                 p={2}
-                to={navItem.href ?? '/'}
+                to={navItem.href ?? '/' }
                 fontSize={'sm'}
                 fontWeight={500}
                 color={linkColor}
